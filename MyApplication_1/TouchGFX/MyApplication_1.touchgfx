@@ -1,0 +1,255 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_240x320_gradient_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bullet",
+            "X": 105,
+            "Y": 250,
+            "Width": 20,
+            "Height": 20,
+            "RelativeFilename": "bullet.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "player",
+            "X": 90,
+            "Y": 270,
+            "Width": 50,
+            "Height": 50,
+            "RelativeFilename": "soldier.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy1",
+            "X": 200,
+            "Y": -52,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy4",
+            "Y": 30,
+            "Width": 40,
+            "Height": 40,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy2",
+            "X": 154,
+            "Y": -52,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy3",
+            "X": 100,
+            "Y": -52,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy6",
+            "X": 40,
+            "Y": -52,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "enemy5",
+            "X": -9,
+            "Y": -52,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "lamp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 175,
+            "Y": 6,
+            "Width": 43,
+            "Height": 12,
+            "TextId": "__SingleUse_8OUX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_7F5N",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonNew",
+            "Y": 178,
+            "Width": 240,
+            "Height": 50,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "TextId": "__SingleUse_4ALN",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highscore",
+            "X": 148,
+            "Y": 18,
+            "Width": 70,
+            "Height": 12,
+            "TextId": "__SingleUse_ETT6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_E5TJ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonWithIcon1",
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "__generated\\icon_theme_images_av_pause_circle_filled_30_30_000000.svg.png",
+            "Released": "__generated\\icon_theme_images_av_pause_circle_filled_30_30_000000.svg.png",
+            "IconPressed": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconReleased": "__generated\\icon_theme_images_action_done_50_50_E8F6FB.svg.png",
+            "IconX": 97,
+            "IconHeight": 50,
+            "IconWidth": 50
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonNew"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "newGame"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithIcon1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function1"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication_1",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}
