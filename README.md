@@ -15,11 +15,11 @@ Sheep Invaders là một trò chơi lấy cảm hứng từ trò chơi Space Inv
 
 Game được xây dựng theo mô hình MVP (Model-View-Presenter) giúp tách biệt rõ ràng giữa logic và giao diện:
 
-- Model.cpp: Đây là nơi xử lý logic "ngầm". Hàm quan trọng nhất là tick(), đóng vai trò như nhịp tim của hệ thống. Cứ mỗi khung hình (1/60 giây), hàm này sẽ chạy để quét trạng thái nút bấm, xử lý va chạm và điều khiển loa buzzer.
+- Model.cpp: Đây là nơi xử lý logic 
     - tick(): Kiểm tra trạng thái các chân GPIO (PE2, PE3, PC3). Nếu phát hiện nút được nhấn (xung xuống), nó sẽ báo cho Presenter. Ngoài ra còn quản lý bộ đếm để tạo tiếng bíp không gây treo máy.
-    - GetRandomNumber(): Gọi trực tiếp hàm của phần cứng STM32 để lấy một số ngẫu nhiên "xịn" dùng cho việc xuất hiện cừu.
+    - GetRandomNumber(): Gọi trực tiếp hàm của phần cứng STM32 để lấy một số ngẫu nhiên dùng cho việc xuất hiện cừu.
     - saveHighScore(): So sánh điểm hiện tại với điểm cao nhất đã lưu, nếu phá kỷ lục thì cập nhật lại.
-- Screen1View.cpp: Đây là nơi quản lý những gì bạn thấy trên màn hình. Hàm handleTickEvent() sẽ lấy dữ liệu từ Model để cập nhật vị trí các con cừu và đạn, đảm bảo hình ảnh hiển thị mượt mà. 
+- Screen1View.cpp: Đây là nơi quản lý  màn hình. Hàm handleTickEvent() sẽ lấy dữ liệu từ Model để cập nhật vị trí các con cừu và đạn, đảm bảo hình ảnh hiển thị mượt mà. 
     - handleTickEvent(): Vòng lặp chính của giao diện. Nó lo việc cho cừu rơi xuống, di chuyển đạn, và kiểm tra xem đạn có trúng cừu hay cừu có đâm vào người chơi không.
     - updateBulletPosition(): Cứ mỗi 1/60 giây lại trừ tọa độ Y của đạn để nó bay lên trên.
     - setupScreen(): Chạy duy nhất một lần khi mở game để sắp xếp các con cừu và đạn vào "hàng chờ" (Object Pool) sẵn sàng sử dụng.
